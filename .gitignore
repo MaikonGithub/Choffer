@@ -6,6 +6,7 @@
 xcuserdata/
 **/UserInterfaceState.xcuserstate
 
+**/xcschememanagement.plist
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
@@ -40,7 +41,7 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
-# Package.resolved
+Package.resolved
 #
 # Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
 # hence it is not needed unless you have added a package configuration file to your project
@@ -95,3 +96,6 @@ iOSInjectionProject/
 # Firebase/Google Services
 GoogleService-Info.plist
 GoogleService-Info-*.plist
+
+# Cursor IDE
+.cursor/
