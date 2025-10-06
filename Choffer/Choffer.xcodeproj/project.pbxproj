@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D32DE5EF2E93135E000E7E2D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D32DE5EE2E93135E000E7E2D /* FirebaseAnalytics */; };
+		D370586D2E8C40C700DD77DA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D370586C2E8C40C700DD77DA /* FirebaseAuth */; };
+		D370586F2E8C40C700DD77DA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D370586E2E8C40C700DD77DA /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D37057C72E8C255600DD77DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D37057B12E8C255500DD77DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D37057B82E8C255500DD77DA;
+			remoteInfo = Choffer;
+		};
+		D37057D12E8C255600DD77DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D37057B12E8C255500DD77DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D37057B82E8C255500DD77DA;
+			remoteInfo = Choffer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D37057B92E8C255500DD77DA /* Choffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Choffer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37057C62E8C255600DD77DA /* ChofferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChofferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37057D02E8C255600DD77DA /* ChofferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChofferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D32DE5F42E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = D37057C52E8C255600DD77DA /* ChofferTests */;
+		};
+		D32DE5F52E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = D37057CF2E8C255600DD77DA /* ChofferUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D37057BB2E8C255500DD77DA /* Choffer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D32DE5F42E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferTests" target */,
+				D32DE5F52E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferUITests" target */,
+			);
+			path = Choffer;
+			sourceTree = "<group>";
+		};
+		D37057C92E8C255600DD77DA /* ChofferTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChofferTests;
+			sourceTree = "<group>";
+		};
+		D37057D32E8C255600DD77DA /* ChofferUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChofferUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D37057B62E8C255500DD77DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D370586D2E8C40C700DD77DA /* FirebaseAuth in Frameworks */,
+				D370586F2E8C40C700DD77DA /* FirebaseFirestore in Frameworks */,
+				D32DE5EF2E93135E000E7E2D /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057C32E8C255600DD77DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057CD2E8C255600DD77DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D37057B02E8C255500DD77DA = {
+			isa = PBXGroup;
+			children = (
+				D37057BB2E8C255500DD77DA /* Choffer */,
+				D37057C92E8C255600DD77DA /* ChofferTests */,
+				D37057D32E8C255600DD77DA /* ChofferUITests */,
+				D37057BA2E8C255500DD77DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D37057BA2E8C255500DD77DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D37057B92E8C255500DD77DA /* Choffer.app */,
+				D37057C62E8C255600DD77DA /* ChofferTests.xctest */,
+				D37057D02E8C255600DD77DA /* ChofferUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D37057B82E8C255500DD77DA /* Choffer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37057DA2E8C255600DD77DA /* Build configuration list for PBXNativeTarget "Choffer" */;
+			buildPhases = (
+				D37057B52E8C255500DD77DA /* Sources */,
+				D37057B62E8C255500DD77DA /* Frameworks */,
+				D37057B72E8C255500DD77DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D37057BB2E8C255500DD77DA /* Choffer */,
+			);
+			name = Choffer;
+			packageProductDependencies = (
+				D370586C2E8C40C700DD77DA /* FirebaseAuth */,
+				D370586E2E8C40C700DD77DA /* FirebaseFirestore */,
+				D32DE5EE2E93135E000E7E2D /* FirebaseAnalytics */,
+			);
+			productName = Choffer;
+			productReference = D37057B92E8C255500DD77DA /* Choffer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D37057C52E8C255600DD77DA /* ChofferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37057DD2E8C255600DD77DA /* Build configuration list for PBXNativeTarget "ChofferTests" */;
+			buildPhases = (
+				D37057C22E8C255600DD77DA /* Sources */,
+				D37057C32E8C255600DD77DA /* Frameworks */,
+				D37057C42E8C255600DD77DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D37057C82E8C255600DD77DA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D37057C92E8C255600DD77DA /* ChofferTests */,
+			);
+			name = ChofferTests;
+			packageProductDependencies = (
+			);
+			productName = ChofferTests;
+			productReference = D37057C62E8C255600DD77DA /* ChofferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D37057CF2E8C255600DD77DA /* ChofferUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37057E02E8C255600DD77DA /* Build configuration list for PBXNativeTarget "ChofferUITests" */;
+			buildPhases = (
+				D37057CC2E8C255600DD77DA /* Sources */,
+				D37057CD2E8C255600DD77DA /* Frameworks */,
+				D37057CE2E8C255600DD77DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D37057D22E8C255600DD77DA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D37057D32E8C255600DD77DA /* ChofferUITests */,
+			);
+			name = ChofferUITests;
+			packageProductDependencies = (
+			);
+			productName = ChofferUITests;
+			productReference = D37057D02E8C255600DD77DA /* ChofferUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D37057B12E8C255500DD77DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					D37057B82E8C255500DD77DA = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					D37057C52E8C255600DD77DA = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = D37057B82E8C255500DD77DA;
+					};
+					D37057CF2E8C255600DD77DA = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = D37057B82E8C255500DD77DA;
+					};
+				};
+			};
+			buildConfigurationList = D37057B42E8C255500DD77DA /* Build configuration list for PBXProject "Choffer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D37057B02E8C255500DD77DA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D370586B2E8C40C700DD77DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D37057BA2E8C255500DD77DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D37057B82E8C255500DD77DA /* Choffer */,
+				D37057C52E8C255600DD77DA /* ChofferTests */,
+				D37057CF2E8C255600DD77DA /* ChofferUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D37057B72E8C255500DD77DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057C42E8C255600DD77DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057CE2E8C255600DD77DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D37057B52E8C255500DD77DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057C22E8C255600DD77DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37057CC2E8C255600DD77DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D37057C82E8C255600DD77DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D37057B82E8C255500DD77DA /* Choffer */;
+			targetProxy = D37057C72E8C255600DD77DA /* PBXContainerItemProxy */;
+		};
+		D37057D22E8C255600DD77DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D37057B82E8C255500DD77DA /* Choffer */;
+			targetProxy = D37057D12E8C255600DD77DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D37057D82E8C255600DD77DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A537934VM9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D37057D92E8C255600DD77DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A537934VM9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D37057DB2E8C255600DD77DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.Choffer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D37057DC2E8C255600DD77DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.Choffer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D37057DE2E8C255600DD77DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.ChofferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Choffer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Choffer";
+			};
+			name = Debug;
+		};
+		D37057DF2E8C255600DD77DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.ChofferTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Choffer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Choffer";
+			};
+			name = Release;
+		};
+		D37057E12E8C255600DD77DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.ChofferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Choffer;
+			};
+			name = Debug;
+		};
+		D37057E22E8C255600DD77DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A537934VM9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FerreiraGroup.ChofferUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Choffer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D37057B42E8C255500DD77DA /* Build configuration list for PBXProject "Choffer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37057D82E8C255600DD77DA /* Debug */,
+				D37057D92E8C255600DD77DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D37057DA2E8C255600DD77DA /* Build configuration list for PBXNativeTarget "Choffer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37057DB2E8C255600DD77DA /* Debug */,
+				D37057DC2E8C255600DD77DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D37057DD2E8C255600DD77DA /* Build configuration list for PBXNativeTarget "ChofferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37057DE2E8C255600DD77DA /* Debug */,
+				D37057DF2E8C255600DD77DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D37057E02E8C255600DD77DA /* Build configuration list for PBXNativeTarget "ChofferUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37057E12E8C255600DD77DA /* Debug */,
+				D37057E22E8C255600DD77DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D370586B2E8C40C700DD77DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D32DE5EE2E93135E000E7E2D /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D370586B2E8C40C700DD77DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D370586C2E8C40C700DD77DA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D370586B2E8C40C700DD77DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D370586E2E8C40C700DD77DA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D370586B2E8C40C700DD77DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D37057B12E8C255500DD77DA /* Project object */;
+}
