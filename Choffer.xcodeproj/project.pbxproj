@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3034F8D2E95719800E4DC62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3034F8A2E95719800E4DC62 /* ContentView.swift */; };
+		D3034F8E2E95719800E4DC62 /* ChofferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3034F892E95719800E4DC62 /* ChofferApp.swift */; };
+		D3034F8F2E95719800E4DC62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3034F8B2E95719800E4DC62 /* GoogleService-Info.plist */; };
+		D3034F902E95719800E4DC62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3034F8C2E95719800E4DC62 /* README.md */; };
 		D32DE5EF2E93135E000E7E2D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D32DE5EE2E93135E000E7E2D /* FirebaseAnalytics */; };
 		D370586D2E8C40C700DD77DA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D370586C2E8C40C700DD77DA /* FirebaseAuth */; };
 		D370586F2E8C40C700DD77DA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D370586E2E8C40C700DD77DA /* FirebaseFirestore */; };
@@ -30,35 +34,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3034F892E95719800E4DC62 /* ChofferApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChofferApp.swift; sourceTree = "<group>"; };
+		D3034F8A2E95719800E4DC62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3034F8B2E95719800E4DC62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3034F8C2E95719800E4DC62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D37057B92E8C255500DD77DA /* Choffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Choffer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37057C62E8C255600DD77DA /* ChofferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChofferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37057D02E8C255600DD77DA /* ChofferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChofferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D32DE5F42E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = D37057C52E8C255600DD77DA /* ChofferTests */;
-		};
-		D32DE5F52E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = D37057CF2E8C255600DD77DA /* ChofferUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D37057BB2E8C255500DD77DA /* Choffer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				D32DE5F42E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferTests" target */,
-				D32DE5F52E9313EE000E7E2D /* Exceptions for "Choffer" folder in "ChofferUITests" target */,
-			);
 			path = Choffer;
 			sourceTree = "<group>";
 		};
@@ -105,6 +92,10 @@
 		D37057B02E8C255500DD77DA = {
 			isa = PBXGroup;
 			children = (
+				D3034F892E95719800E4DC62 /* ChofferApp.swift */,
+				D3034F8A2E95719800E4DC62 /* ContentView.swift */,
+				D3034F8B2E95719800E4DC62 /* GoogleService-Info.plist */,
+				D3034F8C2E95719800E4DC62 /* README.md */,
 				D37057BB2E8C255500DD77DA /* Choffer */,
 				D37057C92E8C255600DD77DA /* ChofferTests */,
 				D37057D32E8C255600DD77DA /* ChofferUITests */,
@@ -248,6 +239,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3034F8F2E95719800E4DC62 /* GoogleService-Info.plist in Resources */,
+				D3034F902E95719800E4DC62 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3034F8D2E95719800E4DC62 /* ContentView.swift in Sources */,
+				D3034F8E2E95719800E4DC62 /* ChofferApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

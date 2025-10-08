@@ -20,12 +20,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            if authService.isAuthenticated {
+            if authService.isLoading {
+                // Mostrar splash enquanto carrega
+                SplashView()
+            } else if authService.isAuthenticated {
                 // Usuário autenticado - mostrar tela principal
                 MainScreenView()
             } else {
-                // Usuário não autenticado - mostrar tela de login
-                LoginView()
+                // Usuário não autenticado - mostrar tela de registro
+                RegistrationView()
             }
         }
         .environmentObject(authService)

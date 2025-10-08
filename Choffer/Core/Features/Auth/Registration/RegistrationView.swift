@@ -13,9 +13,9 @@ struct RegistrationView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
-                                    // Logo animada
-                AnimatedLogo(height: 80)
-                    .padding(.top, 20)
+                    // Logo animada
+                    AnimatedLogo(height: 80)
+                        .padding(.top, 20)
                     
                     // Header
                     VStack(spacing: 8) {
@@ -34,38 +34,38 @@ struct RegistrationView: View {
                     
                     // Campos de entrada
                     VStack(spacing: 16) {
-                                                                                    OnboardingTextField(
+                        OnboardingTextField(
                             placeholder: "Nome Completo",
-                            text: $viewModel.name,
+                            text: $viewModel.fullName,
                             icon: "person",
                             textContentType: .name,
                             maxLength: 100,
                             fieldType: .text
                         )
                         
-                                                                                    OnboardingTextField(
+                        OnboardingTextField(
                             placeholder: "CPF",
                             text: $viewModel.cpf,
                             icon: "creditcard",
                             keyboardType: .numberPad,
                             textContentType: .none,
                             maxLength: 14,
-                            formatter: FormattingUtils.formatCPFForDisplay,
+                            formatter: FormattingUtils.cpfDisplay,
                             fieldType: .cpf
                         )
                         
-                                                                                    OnboardingTextField(
+                        OnboardingTextField(
                             placeholder: "Telefone",
                             text: $viewModel.phoneNumber,
                             icon: "phone",
                             keyboardType: .phonePad,
                             textContentType: .telephoneNumber,
                             maxLength: 15,
-                            formatter: FormattingUtils.formatPhoneForDisplay,
+                            formatter: FormattingUtils.phoneDisplay,
                             fieldType: .phoneNumber
                         )
                         
-                                                                                    OnboardingTextField(
+                        OnboardingTextField(
                             placeholder: "Senha",
                             text: $viewModel.password,
                             icon: "lock",
@@ -75,7 +75,7 @@ struct RegistrationView: View {
                             fieldType: .password
                         )
                         
-                                                                                    OnboardingTextField(
+                        OnboardingTextField(
                             placeholder: "Confirmar Senha",
                             text: $viewModel.confirmPassword,
                             icon: "lock",
@@ -101,18 +101,18 @@ struct RegistrationView: View {
                             title: "Criar Conta",
                             isLoading: viewModel.isLoading
                         ) {
-                                                                viewModel.register()
+                            viewModel.startRegistration()
                         }
                     }
                     
                     // Link para login
-                    HStack {
-                        Text("Já tem uma conta?")
-                            .foregroundColor(.secondary)
-                        
-                        NavigationLink("Fazer Login", destination: LoginView())
-                            .foregroundColor(.blue)
-                    }
+//                    HStack {
+//                        Text("Já tem uma conta?")
+//                            .foregroundColor(.secondary)
+//                        
+//                        NavigationLink("Fazer Login", destination: LoginView())
+//                            .foregroundColor(.blue)
+//                    }
                     
                     Spacer(minLength: 30)
                     
@@ -145,7 +145,7 @@ struct RegistrationView: View {
                 }
             }
             .navigationDestination(isPresented: $viewModel.shouldNavigateToPhoneVerification) {
-                PhoneVerificationView(isNewUser: true, phoneNumber: viewModel.registrationPhoneNumber)
+                PhoneVerificationView(viewModel: viewModel, isNewUser: true)
             }
 
         }

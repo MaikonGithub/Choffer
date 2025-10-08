@@ -34,6 +34,7 @@ class AuthenticationService: ObservableObject {
     // MARK: - Initialization
     
     init() {
+        isLoading = true
         setupAuthStateListener()
     }
     
@@ -49,6 +50,8 @@ class AuthenticationService: ObservableObject {
                     self?.currentUser = nil
                     self?.isAuthenticated = false
                 }
+                // Finalizar loading após verificar estado
+                self?.isLoading = false
             }
         }
     }
