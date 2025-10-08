@@ -81,22 +81,44 @@ class AuthenticationService: ObservableObject {
     ///   - phoneNumber: Número de telefone (formato brasileiro: 11999999999)
     ///   - completion: Callback com resultado (verificationID ou erro)
     func startRegistration(phoneNumber: String, completion: @escaping (Result<String, Error>) -> Void) {
+        print("🔍 [DEBUG] AuthenticationService.startRegistration chamado")
+        print("🔍 [DEBUG] PhoneNumber recebido: '\(phoneNumber)'")
+        
         // Formatar para E.164: +55DDNNNNNNNNN
         let formattedPhone = FormattingUtils.phoneFirebase(phoneNumber)
+        let rawPhone = FormattingUtils.phoneRaw(phoneNumber)
+        
+        print("🔍 [DEBUG] Telefone processado:")
+        print("   - Original: '\(phoneNumber)'")
+        print("   - Raw: '\(rawPhone)' (dígitos: \(rawPhone.count))")
+        print("   - Firebase format: '\(formattedPhone)'")
+        
+        // Validar formato antes de enviar
+        if rawPhone.count < 10 || rawPhone.count > 11 {
+            print("❌ [DEBUG] Telefone inválido: \(rawPhone.count) dígitos")
+            completion(.failure(AuthenticationError.invalidPhoneNumber))
+            return
+        }
         
         print("🔧 Tentando enviar SMS para: \(formattedPhone)")
         
         // Usar callback-based para máxima compatibilidade
         PhoneAuthProvider.provider().verifyPhoneNumber(formattedPhone, uiDelegate: nil) { verificationID, error in
             DispatchQueue.main.async {
+                print("🔍 [DEBUG] Firebase callback recebido")
                 if let error = error {
-                    print("❌ Erro ao enviar SMS: \(error)")
+                    print("❌ Erro detalhado do Firebase SMS:")
+                    print("   - Tipo: \(type(of: error))")
+                    print("   - Descrição: \(error.localizedDescription)")
+                    print("   - NSError code: \((error as NSError).code)")
+                    print("   - NSError domain: \((error as NSError).domain)")
+                    print("   - NSError userInfo: \((error as NSError).userInfo)")
                     completion(.failure(error))
                 } else if let verificationID = verificationID {
-                    print("✅ SMS enviado com sucesso")
+                    print("✅ SMS enviado com sucesso - VerificationID: \(verificationID)")
                     completion(.success(verificationID))
                 } else {
-                    print("❌ VerificationID é nil")
+                    print("❌ VerificationID é nil - erro inesperado")
                     completion(.failure(AuthenticationError.unknown))
                 }
             }

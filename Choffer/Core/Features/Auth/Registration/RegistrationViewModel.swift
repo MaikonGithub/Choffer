@@ -57,36 +57,61 @@ class RegistrationViewModel: ObservableObject {
     
     /// Inicia o processo de registro
     func startRegistration() {
+        print("🔍 [DEBUG] Iniciando startRegistration()")
+        
         // Limpar mensagens anteriores
         clearMessages()
         
+        // Debug: Mostrar dados atuais
+        print("🔍 [DEBUG] Dados do formulário:")
+        print("   - Nome: '\(fullName)'")
+        print("   - CPF: '\(cpf)'")
+        print("   - Telefone: '\(phoneNumber)'")
+        print("   - Senha: '\(password.isEmpty ? "vazia" : "preenchida")'")
+        print("   - Confirmar Senha: '\(confirmPassword.isEmpty ? "vazia" : "preenchida")'")
+        
         // Validar campos
+        print("🔍 [DEBUG] Iniciando validação de campos...")
         guard validateFields() else {
+            print("❌ [DEBUG] Validação de campos falhou")
             return
         }
+        print("✅ [DEBUG] Validação de campos passou")
         
         // Iniciar carregamento
         isLoading = true
         
         // Formatar telefone para Firebase
         let formattedPhone = FormattingUtils.phoneFirebase(phoneNumber)
+        print("🔍 [DEBUG] Telefone formatado para Firebase: '\(formattedPhone)'")
+        
+        // Validar formato final
+        let rawPhone = FormattingUtils.phoneRaw(phoneNumber)
+        print("🔍 [DEBUG] Telefone raw: '\(rawPhone)' (dígitos: \(rawPhone.count))")
         
         print("📱 Iniciando registro para: \(formattedPhone)")
         
         // Chamar AuthenticationService
         authService.startRegistration(phoneNumber: phoneNumber) { [weak self] result in
             DispatchQueue.main.async {
+                print("🔍 [DEBUG] Callback do Firebase recebido")
                 self?.isLoading = false
                 
                 switch result {
                 case .success(let verificationID):
-                    print("✅ SMS enviado com sucesso")
+                    print("✅ SMS enviado com sucesso - VerificationID: \(verificationID)")
                     self?.verificationID = verificationID
                     self?.successMessage = "SMS enviado! Verifique seu telefone."
                     self?.shouldNavigateToPhoneVerification = true
+                    print("🔍 [DEBUG] Navegação ativada: \(self?.shouldNavigateToPhoneVerification ?? false)")
                     
                 case .failure(let error):
-                    print("❌ Erro ao enviar SMS: \(error)")
+                    print("❌ Erro detalhado do Firebase:")
+                    print("   - Tipo: \(type(of: error))")
+                    print("   - Descrição: \(error.localizedDescription)")
+                    print("   - NSError code: \((error as NSError).code)")
+                    print("   - NSError domain: \((error as NSError).domain)")
+                    print("   - NSError userInfo: \((error as NSError).userInfo)")
                     self?.errorMessage = self?.getErrorMessage(for: error)
                 }
             }
@@ -159,52 +184,77 @@ class RegistrationViewModel: ObservableObject {
     
     /// Valida todos os campos do formulário
     private func validateFields() -> Bool {
+        print("🔍 [DEBUG] Iniciando validação detalhada...")
+        
         // Validar nome
         let cleanName = FormattingUtils.nameClean(fullName)
+        print("🔍 [DEBUG] Nome limpo: '\(cleanName)' (count: \(cleanName.count))")
         if cleanName.isEmpty {
+            print("❌ [DEBUG] Nome vazio")
             errorMessage = "Por favor, digite seu nome completo."
             return false
         }
         
         if cleanName.count < 2 {
+            print("❌ [DEBUG] Nome muito curto: \(cleanName.count) caracteres")
             errorMessage = "Nome deve ter pelo menos 2 caracteres."
             return false
         }
+        print("✅ [DEBUG] Nome válido")
         
         // Validar telefone
-        if !FormattingUtils.phoneValid(phoneNumber) {
+        let phoneValid = FormattingUtils.phoneValid(phoneNumber)
+        let rawPhone = FormattingUtils.phoneRaw(phoneNumber)
+        print("🔍 [DEBUG] Telefone: '\(phoneNumber)' -> raw: '\(rawPhone)' (count: \(rawPhone.count))")
+        print("🔍 [DEBUG] Telefone válido: \(phoneValid)")
+        if !phoneValid {
+            print("❌ [DEBUG] Telefone inválido")
             errorMessage = "Por favor, digite um telefone válido."
             return false
         }
+        print("✅ [DEBUG] Telefone válido")
         
         // Validar senha
+        print("🔍 [DEBUG] Senha: '\(password.isEmpty ? "vazia" : "preenchida")' (count: \(password.count))")
         if password.isEmpty {
+            print("❌ [DEBUG] Senha vazia")
             errorMessage = "Por favor, digite uma senha."
             return false
         }
         
         if password.count < 6 {
+            print("❌ [DEBUG] Senha muito curta: \(password.count) caracteres")
             errorMessage = "Senha deve ter pelo menos 6 caracteres."
             return false
         }
+        print("✅ [DEBUG] Senha válida")
         
         // Validar confirmação de senha
+        print("🔍 [DEBUG] Confirmar senha: '\(confirmPassword.isEmpty ? "vazia" : "preenchida")' (count: \(confirmPassword.count))")
         if confirmPassword.isEmpty {
+            print("❌ [DEBUG] Confirmação de senha vazia")
             errorMessage = "Por favor, confirme sua senha."
             return false
         }
         
         if password != confirmPassword {
+            print("❌ [DEBUG] Senhas não coincidem")
             errorMessage = "As senhas não coincidem."
             return false
         }
+        print("✅ [DEBUG] Confirmação de senha válida")
         
         // Validar CPF (se preenchido)
-        if !cpf.isEmpty && !FormattingUtils.cpfValid(cpf) {
+        let cpfValid = FormattingUtils.cpfValid(cpf)
+        print("🔍 [DEBUG] CPF: '\(cpf)' -> válido: \(cpfValid)")
+        if !cpf.isEmpty && !cpfValid {
+            print("❌ [DEBUG] CPF inválido")
             errorMessage = "Por favor, digite um CPF válido."
             return false
         }
+        print("✅ [DEBUG] CPF válido (ou vazio)")
         
+        print("✅ [DEBUG] Todas as validações passaram!")
         return true
     }
     
