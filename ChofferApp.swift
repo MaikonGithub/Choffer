@@ -20,8 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         // Isso permite usar números de teste sem precisar de Push Notifications
         Auth.auth().settings?.isAppVerificationDisabledForTesting = true
         
-        print("🔥 Firebase configurado com sucesso!")
-        print("🧪 App Verification DESABILITADA - Modo Testes (Simulator)")
         return true
     }
     
@@ -46,8 +44,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("⚠️ Falha ao registrar notificações remotas: \(error)")
-        print("🧪 Normal no Simulator - use números de teste do Firebase")
+        // Normal no Simulator - Firebase usa reCAPTCHA como fallback
     }
 }
 
