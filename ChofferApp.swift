@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseAuth
 
 /// AppDelegate para configuração do Firebase
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -14,8 +15,39 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Configurar Firebase
         FirebaseApp.configure()
+        
+        // IMPORTANTE: Desabilitar verificação automática de app para usar reCAPTCHA no Simulator
+        // Isso permite usar números de teste sem precisar de Push Notifications
+        Auth.auth().settings?.isAppVerificationDisabledForTesting = true
+        
         print("🔥 Firebase configurado com sucesso!")
+        print("🧪 App Verification DESABILITADA - Modo Testes (Simulator)")
         return true
+    }
+    
+    // MARK: - Remote Notifications (Necessário para Firebase Phone Auth)
+    
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        // Encaminhar notificações para FirebaseAuth
+        if Auth.auth().canHandleNotification(userInfo) {
+            completionHandler(.noData)
+            return
+        }
+        completionHandler(.noData)
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // Firebase pode precisar desse token
+        Auth.auth().setAPNSToken(deviceToken, type: .unknown)
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("⚠️ Falha ao registrar notificações remotas: \(error)")
+        print("🧪 Normal no Simulator - use números de teste do Firebase")
     }
 }
 
